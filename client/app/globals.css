@@ -3,31 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  @apply bg-gray-900 text-gray-300;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.body-container{
+  @apply flex flex-col items-center;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.searchbar-container{
+  @apply inline-flex mt-[4rem] m-6 p-0;
 }
+.search-bar{
+  @apply bg-gray-300 rounded-3xl px-3 py-2 text-gray-900 outline-none;
+}
+/* changing the x in the search bar */
+[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg clip-rule='evenodd' fill-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z'/></svg>");
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  @apply bg-gray-900 h-[1.5rem] w-[1.5rem];
+}
+.search-icon{
+  @apply text-gray-300 text-3xl text-center my-auto mx-2;
+}
+h1{
+  @apply m-2 text-center text-2xl;
+}
+p{
+  @apply m-2 text-center text-xl text-gray-300 font-medium italic underline;
 }
