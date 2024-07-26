@@ -1,5 +1,5 @@
 'use client'
-import React, {ChangeEvent, useState} from 'react'
+import React, {ChangeEvent, useMemo, useRef, useState} from 'react'
 import { IoSearch } from "react-icons/io5";
 
 // creating search props 
@@ -10,10 +10,12 @@ export type SearchProps = {
 const Search = (props: SearchProps) => {
   // bringing in props and deconstructing it
   const {onSearch} = props;
-  // setting up useState
-  const [value, setValue] = useState('Search')
   // placeholder value
   const placeholderValue = "Search"
+  // setting up useState
+  const [value, setValue] = useState('Search') //searchbar one
+
+
   // search function 
   const searchHandler = (event: ChangeEvent<HTMLInputElement>)=>{
     const {target} = event;

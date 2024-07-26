@@ -1,6 +1,7 @@
 'use client'
 import {useState} from 'react'
 import Search from "./components/Search";
+import SearchBar from './components/SearchBar';
 
 export default function Home() {
 
@@ -19,6 +20,10 @@ export default function Home() {
       <h1>Searched For:</h1>
       {/* displaying the search value on the page */}
       <p>{searchValue}</p>
+      <br/>
+      <br/>
+      <SearchBar/>
+      
     </main>
   );
 }

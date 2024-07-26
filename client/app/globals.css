@@ -27,6 +27,13 @@
 h1{
   @apply m-2 text-center text-2xl;
 }
-p{
+/* search-results it the second searchbar */
+.search-results, p{
   @apply m-2 text-center text-xl text-gray-300 font-medium italic underline;
+}
+.data-input{
+  @apply bg-gray-300 rounded-l-3xl px-2 py-1;
+}
+.add-button{
+  @apply  text-lg hover:bg-lime-400 text-gray-900 py-[5px] px-2 rounded-r-3xl bg-gray-300;
 }
