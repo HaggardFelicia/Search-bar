@@ -11,7 +11,7 @@ const Search = (props: SearchProps) => {
   // bringing in props and deconstructing it
   const {onSearch} = props;
   // placeholder value
-  const placeholderValue = "Search"
+  const placeholderValue = "Search..."
   // setting up useState
   const [value, setValue] = useState('Search') //searchbar one
 

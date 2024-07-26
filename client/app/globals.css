@@ -3,16 +3,19 @@
 @tailwind utilities;
 
 :root {
-  @apply bg-gray-900 text-gray-300;
+  @apply bg-gray-900 text-lime-400 text-center;
 }
 .body-container{
-  @apply flex flex-col items-center;
+  @apply flex flex-col items-center m-2;
 }
 .searchbar-container{
-  @apply inline-flex mt-[4rem] m-6 p-0;
+  @apply inline-flex mt-[1rem] m-6 p-0 mx-auto;
+}
+.searchbar-header{
+  @apply mt-2 not-italic no-underline;
 }
 .search-bar{
-  @apply bg-gray-300 rounded-3xl px-3 py-2 text-gray-900 outline-none;
+  @apply bg-gray-300 rounded-3xl px-4 py-2 text-gray-900 outline-none mx-auto;
 }
 /* changing the x in the search bar */
 [type="search"]::-webkit-search-cancel-button {
@@ -29,10 +32,10 @@ h1{
 }
 /* search-results it the second searchbar */
 .search-results, p{
-  @apply m-2 text-center text-xl text-gray-300 font-medium italic underline;
+  @apply m-2 text-center text-xl text-lime-400 font-medium italic underline;
 }
 .data-input{
-  @apply bg-gray-300 rounded-l-3xl px-2 py-1;
+  @apply bg-gray-300 rounded-l-3xl px-4 py-1 text-gray-900 outline-none mx-auto;
 }
 .add-button{
   @apply  text-lg hover:bg-lime-400 text-gray-900 py-[5px] px-2 rounded-r-3xl bg-gray-300;

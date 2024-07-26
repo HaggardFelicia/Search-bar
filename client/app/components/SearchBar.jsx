@@ -5,7 +5,7 @@ import { IoSearch } from "react-icons/io5";
 
 export default function SearchBar() {
     // placeholder value
-    const placeholderValue = "Search"
+    const placeholderValue = "Search..."
     const inputPlaceholderValue = "Add data to search for here..."
     // setting up useState
     const [items, setItems] = useState([])
@@ -24,7 +24,7 @@ export default function SearchBar() {
         // sets value to current value of searchRef if the value is empty it returns otherwise it add to the setItems useState
         const value = searchRef.current.value
         if (value === "") return
-        setItems(prev => {
+        setItems((prev)=> {
         return [...prev, value]
         })
         // setting the current searchRef to empty
@@ -50,7 +50,8 @@ export default function SearchBar() {
         <form onSubmit={onSubmit} className='data-input-form'>
             <input 
             // setting the ref to searchRef which is defined on line 12
-                ref={searchRef} type="text" 
+                ref={searchRef} 
+                type="text" 
                 className='data-input'
                 placeholder={inputPlaceholderValue}
                 />

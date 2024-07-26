@@ -1,7 +1,7 @@
 'use client'
 import {useState} from 'react'
 import Search from "./components/Search";
-import SearchBar from './components/SearchBar';
+import SearchBar from './components/SearchBar.jsx';
 
 export default function Home() {
 
@@ -15,15 +15,17 @@ export default function Home() {
 
   return (
     <main className="body-container">
+      <p className='searchbar-header'>TypeScript Search Bar</p>
       {/* search taking the handle search function */}
       <Search onSearch={handleSearch}/>
-      <h1>Searched For:</h1>
+      <h3>Searched For:</h3>
       {/* displaying the search value on the page */}
       <p>{searchValue}</p>
       <br/>
       <br/>
+      <p className='searchbar-header'>JavaScript Search Bar</p>
       <SearchBar/>
-      
+
     </main>
   );
 }
