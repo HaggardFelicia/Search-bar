@@ -41,7 +41,7 @@ export default function SearchBar() {
             <div>
                 <h1>Data:</h1>
                 {items.map(item=>(
-                <div className="search-results" key={item}>{item}</div>
+                <div className="search-results" key={item.value}>{item}</div>
                 ))}
             </div>
         )
@@ -51,7 +51,7 @@ export default function SearchBar() {
             <div>
                 <h1>Results:</h1>
                 {(filteredItems.map(item => (
-                    <div className='search-results' key={searchRef}>{item}</div>
+                    <div className='search-results' key={item.value}>{item}</div>
                 )))}
             </div>
         )
