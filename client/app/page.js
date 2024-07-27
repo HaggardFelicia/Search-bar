@@ -1,5 +1,5 @@
 'use client'
-import SearchBar from './components/SearchBar.jsx';
+import SearchBar from './components/SearchBar.js';
 
 export default function Home() {
 
